@@ -153,6 +153,7 @@ public class DruidDBConfig {
     public ServletRegistrationBean druidServlet() {
         ServletRegistrationBean reg = new ServletRegistrationBean();
         reg.setServlet(new StatViewServlet());
+        /*访问地址localhost:8080/druid*/
         reg.addUrlMappings("/druid/*");
         reg.addInitParameter("loginUsername", usernameOne);
         reg.addInitParameter("loginPassword", passwordOne);

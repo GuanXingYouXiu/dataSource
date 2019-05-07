@@ -32,4 +32,11 @@ public final class TimestampUtils {
         return localDateTime.toInstant(localZoneOffset).toEpochMilli();
     }
 
+    public static LocalDateTime LocalDateToLocalDateTime(LocalDate localDate){
+        ZoneId zone = ZoneId.systemDefault();
+        Instant instant=localDate.atStartOfDay().atZone(zone).toInstant();
+        /*Date date=Date.from(instant);*/
+        return LocalDateTime.ofInstant(instant, zone);
+    }
+
 }

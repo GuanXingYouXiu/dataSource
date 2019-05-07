@@ -35,7 +35,7 @@ public class PeopleController {
     private ThemeInfoService themeInfoService;
 
 
-    @GetMapping("queryStu")
+    @GetMapping("queryStuAll")
     public List<Student> queryStudent() {
         return studentRepo.findAll();
     }
